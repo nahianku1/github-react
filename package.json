@@ -2,6 +2,7 @@
   "name": "github-react",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://nahianku1.github.io/github-react",
   "type": "module",
   "scripts": {
     "dev": "vite",
