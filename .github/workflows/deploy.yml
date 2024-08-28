@@ -6,7 +6,9 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
@@ -28,7 +30,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.0
+        id: build-publish
+        uses: bitovi/github-actions-react-to-github-pages@v1.2.4
         with:
-          branch: gh-pages
-          folder: dist
+          path: build # change to your build folder
